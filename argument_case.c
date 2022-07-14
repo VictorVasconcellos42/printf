@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 10:08:48 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/07/14 12:03:09 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:18:08 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	argument_case(char c, va_list arguments)
 
 {
+	int	count;
+
 	if (c == 'c')
 		return (ft_putchar(va_arg(arguments, int)));
 	if (c == 's')
@@ -26,11 +28,13 @@ int	argument_case(char c, va_list arguments)
 	if (c == 'X')
 		return (ft_puthexa_case(va_arg(arguments, unsigned int), c));
 	if (c == 'p')
-		return (ft_puthexa_case(va_arg(arguments, unsigned long), c));
+	{
+		count = ft_putstr("0x");
+		return (count + ft_puthexa_case(va_arg(arguments, unsigned long), c));
+	}
 	if (c == 'u')
 		return (ft_putunbr(va_arg(arguments, unsigned int)));
 	if (c == '%')
 		return (ft_putchar('%'));
 	return (0);
 }
-
