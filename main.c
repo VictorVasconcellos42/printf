@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 08:34:43 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/07/13 09:31:18 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:19:47 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@
 int	main(void)
 
 {
-	ft_putchar('a');
-	ft_putchar('\n');
-	ft_putstr("Hello\n");
-	ft_putnbr(42);
-	ft_putchar('\n');
+	//int len = ft_printf("Victor%s%d\n", "Victor", 10);
+	int len = ft_printf("%x", 155);
+//	ft_putchar('\n');
+	int len2 = printf("%x", 155);
 
-	int len = ft_printf("RAONI%s", "Victor");
-	printf("%d", len);
+	printf("\n%d\toriginal:%d", len, len2);
 	return 0;
 }
