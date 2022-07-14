@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 10:31:38 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/07/13 14:31:30 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/07/14 19:01:19 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,18 @@ int	ft_puthexa(unsigned long num, char flag)
 			ft_puthexa(num / 16, flag);
 		count += ft_putchar(base[num % 16]);
 	}
-	
+	return (count);
 }
 
 int	ft_puthexa_case(unsigned long num, char flag)
 
 {
+	int	count;
+
+	count = 0;
 	if (flag == 'X')
-		ft_puthexa(num, flag);
-	else if (flag == 'x')
-		ft_puthexa(num, flag);
+		count = ft_puthexa(num, flag);
+	else if (flag == 'x' || flag == 'p') 
+		count = ft_puthexa(num, flag);
+	return (count);
 }
