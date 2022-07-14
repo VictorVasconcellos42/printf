@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 04:55:50 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/07/13 14:37:12 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/07/14 19:09:00 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include <unistd.h>
 
 int	ft_printf(const char *text, ...);
@@ -23,6 +23,6 @@ int	ft_putstr(char *str);
 int	ft_putnbr(int num);
 int	ft_puthexa_case(unsigned long num, char flags);
 int	ft_puthexa(unsigned long num, char flags);
-int	print_argvs(char c, va_list arguments);
+int	argument_case(char c, va_list arguments);
 int	ft_putunbr(unsigned int number);
 #endif
