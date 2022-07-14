@@ -6,13 +6,11 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 04:36:32 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/07/14 18:16:01 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/07/14 19:35:38 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= libftprintf.a
-
-SRC				= ./src
 
 CFLAGS			= -Wall -Wextra -Werror 
 CC				= gcc
@@ -35,9 +33,6 @@ $(NAME): $(LIBFT) $(OBJECTS)
 
 $(LIBFT): $(LIBFT_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-
-%.o: $(SRC)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(MAKE) clean -C $(LIBFT_DIR)
