@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 10:31:38 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/07/21 14:12:59 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:55:09 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,15 @@ int	ft_puthexa(unsigned long num, char flag)
 	char		*base;
 	char		*base2;
 
+	count = 0;
 	base = "0123456789abcdef";
 	base2 = "0123456789ABCDEF";
-	count = 0;
+	if (num >= 16)
+		ft_puthexa(num / 16, flag);
 	if (flag == 'X')
-	{
-		if (num >= 16)
-			ft_puthexa(num / 16, flag);
 		count += ft_putchar(base2[num % 16]);
-	}
-	else if ((flag == 'x') || (flag == 'p'))
-	{
-		if (num >= 16)
-			ft_puthexa(num / 16, flag);
+	else
 		count += ft_putchar(base[num % 16]);
-	}
 	return (count);
 }
 
