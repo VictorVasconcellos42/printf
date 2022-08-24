@@ -6,11 +6,11 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 04:36:32 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/07/19 09:54:08 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/08/23 23:46:24 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= libftprintf.a
+NAME			= libft.a
 
 CFLAGS			= -Wall -Wextra -Werror 
 CC				= gcc
